@@ -1,4 +1,4 @@
 document.getElementsById('github').onclick = function(){
 
-    alert('Изучил git и github');
+    alert('Изучил git и github напроч');
 };
