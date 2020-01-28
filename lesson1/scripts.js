@@ -9,7 +9,7 @@ let money =  +prompt('Ваш месячный доход?', 7777),
     deposit = confirm('Есть ли у вас депозит в банке?'), 
     deposit2, 
     mission = 99999, 
-    period = 3,
+    period = 4,
     budgetMonth,
     numArr,
     arrLength,
@@ -80,8 +80,6 @@ let getTargetMonth = function (){
     return mission / accumulatedMonth;
 };
 console.log('Cрок достижения цели в месяцах:',  Math.ceil(getTargetMonth()));
-
-
 
 budgetDay = accumulatedMonth / 30;
 
