@@ -4,6 +4,33 @@
 let isNumber = function(n) {
 return !isNaN(parseFloat(n)) && isFinite(n)
 };
+let plus = document.getElementsByTagName('button')[0],
+    plusplus = document.getElementsByTagName('button')[1],
+    checkbox = document.querySelector('#deposit-check'),
+    additional_income = document.querySelectorAll('.additional_income-item'),
+    // budget_month = document.getElementsByClassName('budget_month-value'),
+    budget_day = document.getElementsByClassName('budget_day-value'),
+    expenses_month = document.getElementsByClassName('expenses_month-value'),
+    additional_income = document.getElementsByClassName('additional_income-value'),
+    additional_expenses = document.getElementsByClassName('additional_expenses-value'),
+    income_period = document.getElementsByClassName('income_period-value'),
+    target_month = document.getElementsByClassName('target_month-value'),
+    salary_amount = document.querySelector('.salary-amount'),
+    income_title = document.querySelector('.income-title'),
+    income_amount = document.querySelector('.income-amount'),
+    expenses_title = document.querySelector('.expenses-title'),
+    expenses_amount = document.querySelector('.expenses-amount'),
+    sadditional_expenses_item = document.querySelector('.additional_expenses-item'),
+    deposit_amount = document.querySelector('.deposit-amount'),
+    deposit_percent = document.querySelector('.deposit-percent'),
+    target_amount = document.querySelector('.target-amount'),
+    period_select = document.querySelector('.period-select'),
+    result_total  = document.querySelector('.result-total '),
+    cancel = document.querySelector('#cancel');
+  
+
+
+
 let money = 0,
 start = function() {
     do {
@@ -13,8 +40,12 @@ start = function() {
   };
     
   start();
-  console.log(
-  start = document.getElementById('start'));
+  start = document.getElementById('start');
+
+
+
+
+
 
   let   appData = {
         budget: money,
@@ -37,11 +68,11 @@ start = function() {
             let itemIncome,
             cashIncome;
                 do {
-                     itemIncome = prompt('Как вы подрабатываете?');
+                     itemIncome = prompt('Как вы подрабатываете?','taxi');
                 }while (isNumber(itemIncome) || itemIncome ==='' || itemIncome === null); 
 
                 do {
-                    cashIncome = prompt('Сколько на этом в месяц зарабатываете?');
+                    cashIncome = prompt('Сколько на этом в месяц зарабатываете?',777);
                 }while (!isNumber(cashIncome) || cashIncome === '' || cashIncome === null);
             
             appData.income[itemIncome] = cashIncome;
@@ -53,7 +84,7 @@ start = function() {
             for (let i = 0; i < 2 ; i++) {
                 
                 do{
-                    appData.itemExpenses = prompt('Введите обязательную статью расходов?');
+                    appData.itemExpenses = prompt('Введите обязательную статью расходов?','food');
                 } while (isNumber(appData.itemExpenses) || appData.itemExpenses ==='' 
                 || appData.itemExpenses === null);
 
